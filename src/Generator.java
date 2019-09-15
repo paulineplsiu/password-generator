@@ -19,11 +19,14 @@ public class Generator {
 		System.out.println("===== SHUFFLING ==== ");
 		String password = generatePassword(passwordLength);
 		System.out.println("Secure Password: " + password);
+		
 	}
+	
 	
 	public static String generatePassword(int length)
 	{
 		StringBuilder pword_string = new StringBuilder(length);
+		System.out.println("Generating password of length: " + length);
 		for (int i = 0; i < length; i++)
 		{
 			pword_string.append(Password_String.charAt(rand.nextInt(Password_String.length())));
